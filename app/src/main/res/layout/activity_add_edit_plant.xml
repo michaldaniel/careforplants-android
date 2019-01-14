@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ViewModel"
+            type="eu.morningbird.careforplants.viewmodel.AddEditPlantActivityVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.AddEditPlantActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/addEditActivityToolbar"
+                style="@style/AppTheme.ToolbarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme.ToolbarTheme"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:subtitle="@string/add_new_plant"
+                app:subtitleTextAppearance="@style/AppTheme.ToolbarStyle.SubtitleTextAppearance"
+                app:title="@string/app_name"
+                app:titleTextAppearance="@style/AppTheme.ToolbarStyle.TitleTextAppearance" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:elevation="3dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/backgroundImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bg_plant_no_photo"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circleImageView"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:elevation="6dp"
+                            android:src="@drawable/ic_plant_1_big"
+                            app:civ_border_color="#FF000000"
+                            app:civ_border_width="2dp"
+                            app:civ_circle_background_color="@android:color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/changeIconFab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:elevation="6dp"
+                            android:src="@drawable/ic_change_plant_icon"
+                            app:fabSize="mini"
+                            app:layout_constraintBottom_toBottomOf="@+id/addPhotoFab"
+                            app:layout_constraintEnd_toStartOf="@+id/addPhotoFab"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/addPhotoFab" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/addPhotoFab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:elevation="6dp"
+                            android:src="@drawable/ic_add_a_photo"
+                            app:fabSize="mini"
+                            app:layout_constraintBottom_toBottomOf="@+id/removePhotoFab"
+                            app:layout_constraintEnd_toStartOf="@+id/removePhotoFab"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/changeIconFab"
+                            app:layout_constraintTop_toTopOf="@+id/removePhotoFab" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/removePhotoFab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="16dp"
+                            android:backgroundTint="@color/colorDanger"
+                            android:elevation="6dp"
+                            android:src="@drawable/ic_delete"
+                            app:borderWidth="0dp"
+                            app:fabSize="mini"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/addPhotoFab"
+                            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp">
+
+
+                    <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/nameLabelTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:labelFor="@+id/nameEditText"/>
+
+                    <EditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nameLabelTextView"
+                        android:inputType="text"
+                        />
+
+                    <TextView
+                        android:id="@+id/locationLabelTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/location"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nameEditText"
+                        android:labelFor="@+id/locationEditText"/>
+
+                    <EditText
+                        android:id="@+id/locationEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/locationLabelTextView"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/notesLabelTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Notes"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/locationEditText" />
+
+                    <EditText
+                        android:id="@+id/notesEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:lines="3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/notesLabelTextView" />
+
+                    <TextView
+                        android:id="@+id/lastWateringLabelTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="Days since last watering"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/notesEditText" />
+
+                    <com.shawnlin.numberpicker.NumberPicker
+                        android:id="@+id/lastWateringNumberPicker"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lastWateringLabelTextView"
+                        app:np_dividerColor="@color/colorPrimary"
+                        app:np_max="21"
+                        app:np_min="0"
+                        app:np_orientation="horizontal"
+                        app:np_selectedTextColor="@color/colorPrimary"
+                        app:np_selectedTextSize="16sp"
+                        app:np_textColor="?android:textColorSecondary"
+                        app:np_textSize="16sp"
+                        app:np_value="0"
+                        app:np_wheelItemCount="7" />
+
+                    <View
+                        android:id="@+id/separatorView1"
+                        style="@style/Divider"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lastWateringNumberPicker" />
+
+                    <TextView
+                        android:id="@+id/periodEveryDayLabelTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Every day"
+                        app:layout_constraintBottom_toTopOf="@+id/separatorView2"
+                        app:layout_constraintStart_toEndOf="@+id/periodEveryDayCheckBox"
+                        app:layout_constraintTop_toBottomOf="@+id/separatorView1" />
+
+                    <CheckBox
+                        android:id="@+id/periodEveryDayCheckBox"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/periodEveryDayLabelTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/periodEveryDayLabelTextView"
+                        tools:layout_editor_absoluteX="93dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/periodEveryDayRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/periodEveryDayLabelTextView" />
+
+                    <View
+                        android:id="@+id/separatorView2"
+                        style="@style/Divider"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/periodEveryDayRelativeLayout" />
+
+                    <TextView
+                        android:id="@+id/periodEveryFewDaysLabelTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Every few days"
+                        app:layout_constraintBottom_toTopOf="@+id/separatorView3"
+                        app:layout_constraintStart_toEndOf="@+id/periodEveryFewDaysCheckBox"
+                        app:layout_constraintTop_toBottomOf="@+id/separatorView2" />
+
+                    <CheckBox
+                        android:id="@+id/periodEveryFewDaysCheckBox"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/periodEveryFewDaysLabelTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/periodEveryFewDaysLabelTextView"
+                        tools:layout_editor_absoluteX="83dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/periodEveryFewDaysRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/periodEveryFewDaysLabelTextView"
+                        />
+
+                    <View
+                        android:id="@+id/separatorView3"
+                        style="@style/Divider"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/periodEveryFewDaysRelativeLayout" />
+
+                    <TextView
+                        android:id="@+id/periodSelectedDaysLabelTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Selected days of the week"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/periodSelectedDaysCheckBox"
+                        app:layout_constraintTop_toBottomOf="@+id/separatorView3" />
+
+
+                    <CheckBox
+                        android:id="@+id/periodSelectedDaysCheckBox"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/periodSelectedDaysLabelTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/periodSelectedDaysLabelTextView" />
+
+                    <RelativeLayout
+                        android:id="@+id/periodSelectedDaysRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/periodSelectedDaysLabelTextView"/>
+
+                    <View
+                        android:id="@+id/separatorView4"
+                        style="@style/Divider"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/periodSelectedDaysRelativeLayout" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</layout>
