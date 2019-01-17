@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Care For Plants</string>
+    <string name="water_icon">Water icon</string>
+    <string name="location_icon">Location icon</string>
+    <string name="calendar_icon">Calendar icon</string>
+    <string name="add_new_plant">Add new plant</string>
+    <string name="name">Name</string>
+    <string name="location">Location</string>
+</resources>

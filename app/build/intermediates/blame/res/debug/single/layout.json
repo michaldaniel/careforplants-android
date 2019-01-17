@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_edit_plant.xml",
+        "source": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/res/layout/activity_add_edit_plant.xml"
+    },
+    {
+        "merged": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_plant.xml",
+        "source": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/res/layout/item_plant.xml"
+    },
+    {
+        "merged": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_settings.xml",
+        "source": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/res/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_plants_list.xml",
+        "source": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/res/layout/activity_plants_list.xml"
+    },
+    {
+        "merged": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_about.xml",
+        "source": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/res/layout/activity_about.xml"
+    },
+    {
+        "merged": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_plant_details.xml",
+        "source": "/home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/res/layout/activity_plant_details.xml"
+    }
+]

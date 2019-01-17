@@ -1,0 +1,223 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:1-34:12
+MERGED from [com.android.databinding:adapters:3.3.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/adapters-3.3.0.aar/f60a99fd3e8b635acfab3bf360d194f7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.3.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/library-3.3.0.aar/c9d636187206fee15ed063508ce89be2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:design:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1d5bc23f962408a42c92648f12f2f4a8/AndroidManifest.xml:17:1-24:12
+MERGED from [com.shawnlin:number-picker:2.4.6] /home/morningbird/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.6.aar/b3a11d5df387392047658a55ebdf6ca0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/ebadb5241f76fbdc7260eb65cebe73bd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/ea50ab58329cc323496974289dbf8e7d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/316a7ddcb357b6e67d6a6739063c184b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/7556e1fb195fba1918ecc8c2fc55dd99/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/25fe8fe2a3cc15f1a5106e1eb4da310a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/c740bfd77bec1ffe77c97eb3e2c29eb9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/5ca5ff836f5277d759c50429a4e7d6e0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/a267453bfffcecd84eb9a524114be79b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/31cfcc9b2f1e13556d467c883be1df14/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/0b750b41c80661776163f60cdf9409c5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/8e5cea60299f506a941baea968bc1926/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/d774ef1ed4f1dec77f44a4712985c2c2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/0a64c361c84ed5f58402bf111dfca8ae/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/b8ffbbd571f4d7b690b5abe348df662e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/e44f421976f10cd718c63f1476d24fc0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/9777d41f7665b4f588f6448aff218380/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/d03388b0eb57b8dd64c1fb4e19befe1f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/dd3938f5bdd20120d756b7b8954ab22b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/9fc10157c718a6827691d9ec09a44d26/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/b3b02f66b70b7f7ae4a2ab47bbba71e5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/459d65a4d15eef72e0598436a43735dd/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a846d0008bde9317e6919b30b97435c4/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/a34802c90eac9558ec19faf8d61263aa/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db-framework:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/42428f8f56f6c38cd414be54e6e1dee9/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/101b3c030901d9ef9a97c0ed49b276a3/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/6978367d1ea6b2abd8b154b3dc510f5b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/8e80a1191bea973c7fa44def0a370d9b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/2354ad9a92934bc0938506b5484eec75/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/35cdeb36ca5c25cb5850177cef7c042a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/71487271d3a1804bd06652beed8a6f68/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/715c968011563fce0af95c128210e482/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/0e57b40b81f85c2de23fe266b0ec85df/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/dbdf1984aac4d863ec0f2f5f3b562e71/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/67f90b42308717d14d918745295814fe/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/morningbird/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/2e6ca32ec7387fc0c10348dae26cf320/AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/f7623ee907badbe6012da2f42ad6b771/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:1-34:12
+	package
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:3:5-43
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:1-34:12
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:1-34:12
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:5:5-32:19
+MERGED from [com.android.support:design:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1d5bc23f962408a42c92648f12f2f4a8/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1d5bc23f962408a42c92648f12f2f4a8/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/459d65a4d15eef72e0598436a43735dd/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/459d65a4d15eef72e0598436a43735dd/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a846d0008bde9317e6919b30b97435c4/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a846d0008bde9317e6919b30b97435c4/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/morningbird/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/2e6ca32ec7387fc0c10348dae26cf320/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/morningbird/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/2e6ca32ec7387fc0c10348dae26cf320/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/f7623ee907badbe6012da2f42ad6b771/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/f7623ee907badbe6012da2f42ad6b771/AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/459d65a4d15eef72e0598436a43735dd/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:9:9-41
+	android:roundIcon
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:10:9-54
+	android:icon
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:8:9-43
+	android:allowBackup
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:12:9-40
+	android:name
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:6:9-49
+activity#eu.morningbird.careforplants.view.PlantsListActivity
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:13:9-19:20
+	android:name
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:13:19-58
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:14:13-18:29
+action#android.intent.action.MAIN
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:15:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:17:27-74
+activity#eu.morningbird.careforplants.view.SettingsActivity
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:20:9-22:68
+	android:parentActivityName
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:22:13-66
+	android:name
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:21:13-50
+activity#eu.morningbird.careforplants.view.AboutActivity
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:23:9-25:68
+	android:parentActivityName
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:24:13-47
+activity#eu.morningbird.careforplants.view.AddEditPlantActivity
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:26:9-28:68
+	android:parentActivityName
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:28:13-66
+	android:name
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:27:13-54
+activity#eu.morningbird.careforplants.view.PlantDetailsActivity
+ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:29:9-31:69
+	android:parentActivityName
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:31:13-66
+	android:name
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml:30:13-54
+uses-sdk
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.3.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/adapters-3.3.0.aar/f60a99fd3e8b635acfab3bf360d194f7/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.3.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/adapters-3.3.0.aar/f60a99fd3e8b635acfab3bf360d194f7/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.3.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/library-3.3.0.aar/c9d636187206fee15ed063508ce89be2/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.3.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/library-3.3.0.aar/c9d636187206fee15ed063508ce89be2/AndroidManifest.xml:22:5-44
+MERGED from [com.android.support:design:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1d5bc23f962408a42c92648f12f2f4a8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1d5bc23f962408a42c92648f12f2f4a8/AndroidManifest.xml:20:5-44
+MERGED from [com.shawnlin:number-picker:2.4.6] /home/morningbird/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.6.aar/b3a11d5df387392047658a55ebdf6ca0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.shawnlin:number-picker:2.4.6] /home/morningbird/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.6.aar/b3a11d5df387392047658a55ebdf6ca0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/ebadb5241f76fbdc7260eb65cebe73bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/ebadb5241f76fbdc7260eb65cebe73bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/ea50ab58329cc323496974289dbf8e7d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/ea50ab58329cc323496974289dbf8e7d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/316a7ddcb357b6e67d6a6739063c184b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/316a7ddcb357b6e67d6a6739063c184b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/7556e1fb195fba1918ecc8c2fc55dd99/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/7556e1fb195fba1918ecc8c2fc55dd99/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/25fe8fe2a3cc15f1a5106e1eb4da310a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/25fe8fe2a3cc15f1a5106e1eb4da310a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/c740bfd77bec1ffe77c97eb3e2c29eb9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/c740bfd77bec1ffe77c97eb3e2c29eb9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/5ca5ff836f5277d759c50429a4e7d6e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/5ca5ff836f5277d759c50429a4e7d6e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/a267453bfffcecd84eb9a524114be79b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/a267453bfffcecd84eb9a524114be79b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/31cfcc9b2f1e13556d467c883be1df14/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/31cfcc9b2f1e13556d467c883be1df14/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/0b750b41c80661776163f60cdf9409c5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/0b750b41c80661776163f60cdf9409c5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/8e5cea60299f506a941baea968bc1926/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/8e5cea60299f506a941baea968bc1926/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/d774ef1ed4f1dec77f44a4712985c2c2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/d774ef1ed4f1dec77f44a4712985c2c2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/0a64c361c84ed5f58402bf111dfca8ae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/0a64c361c84ed5f58402bf111dfca8ae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/b8ffbbd571f4d7b690b5abe348df662e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/b8ffbbd571f4d7b690b5abe348df662e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/e44f421976f10cd718c63f1476d24fc0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/e44f421976f10cd718c63f1476d24fc0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/9777d41f7665b4f588f6448aff218380/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/9777d41f7665b4f588f6448aff218380/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/d03388b0eb57b8dd64c1fb4e19befe1f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/d03388b0eb57b8dd64c1fb4e19befe1f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/dd3938f5bdd20120d756b7b8954ab22b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/dd3938f5bdd20120d756b7b8954ab22b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/9fc10157c718a6827691d9ec09a44d26/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/9fc10157c718a6827691d9ec09a44d26/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/b3b02f66b70b7f7ae4a2ab47bbba71e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/b3b02f66b70b7f7ae4a2ab47bbba71e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/459d65a4d15eef72e0598436a43735dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/459d65a4d15eef72e0598436a43735dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a846d0008bde9317e6919b30b97435c4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a846d0008bde9317e6919b30b97435c4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/a34802c90eac9558ec19faf8d61263aa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/a34802c90eac9558ec19faf8d61263aa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/42428f8f56f6c38cd414be54e6e1dee9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/42428f8f56f6c38cd414be54e6e1dee9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/101b3c030901d9ef9a97c0ed49b276a3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/101b3c030901d9ef9a97c0ed49b276a3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/6978367d1ea6b2abd8b154b3dc510f5b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/6978367d1ea6b2abd8b154b3dc510f5b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/8e80a1191bea973c7fa44def0a370d9b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/8e80a1191bea973c7fa44def0a370d9b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/2354ad9a92934bc0938506b5484eec75/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/2354ad9a92934bc0938506b5484eec75/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/35cdeb36ca5c25cb5850177cef7c042a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/35cdeb36ca5c25cb5850177cef7c042a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/71487271d3a1804bd06652beed8a6f68/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/71487271d3a1804bd06652beed8a6f68/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/715c968011563fce0af95c128210e482/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/715c968011563fce0af95c128210e482/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/0e57b40b81f85c2de23fe266b0ec85df/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/0e57b40b81f85c2de23fe266b0ec85df/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/dbdf1984aac4d863ec0f2f5f3b562e71/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/morningbird/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/dbdf1984aac4d863ec0f2f5f3b562e71/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/67f90b42308717d14d918745295814fe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/67f90b42308717d14d918745295814fe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/morningbird/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/2e6ca32ec7387fc0c10348dae26cf320/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/morningbird/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/2e6ca32ec7387fc0c10348dae26cf320/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/f7623ee907badbe6012da2f42ad6b771/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/morningbird/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/f7623ee907badbe6012da2f42ad6b771/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+		ADDED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml
+		INJECTED from /home/morningbird/Chmura/Dokumenty/Workspaces/Android/CareForPlants/app/src/main/AndroidManifest.xml

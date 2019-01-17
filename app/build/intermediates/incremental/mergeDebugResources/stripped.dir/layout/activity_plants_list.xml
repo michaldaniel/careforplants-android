@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                 
+                            
+                                                                                 
+           
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.PlantsListActivity" android:tag="layout/activity_plants_list_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/mainActivityToolbar"
+                style="@style/AppTheme.ToolbarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme.ToolbarTheme"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:subtitle="List of your plants"
+                app:subtitleTextAppearance="@style/AppTheme.ToolbarStyle.SubtitleTextAppearance"
+                app:title="@string/app_name"
+                app:titleTextAppearance="@style/AppTheme.ToolbarStyle.TitleTextAppearance" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listPlantsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingTop="16dp"
+                android:paddingBottom="128dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_plant" />
+
+        </ScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_plant_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="32dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="6dp"
+            android:tag="binding_1"                             
+            android:src="@drawable/ic_add"
+            app:fabSize="normal" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+         
