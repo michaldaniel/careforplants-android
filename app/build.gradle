@@ -62,4 +62,10 @@ dependencies {
     /* Number picker */
     implementation 'com.shawnlin:number-picker:2.4.6'
 
+    /* Easy settings */
+    implementation 'com.github.or-dvir.EasySettings:easysettings-basic:1.1.3'
+
+    /* Easy about page */
+    implementation 'com.github.medyo:android-about-page:1.2.5'
+
 }
