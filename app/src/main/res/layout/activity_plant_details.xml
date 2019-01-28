@@ -10,10 +10,11 @@
             type="eu.morningbird.careforplants.viewmodel.PlantDetailsActivityVM" />
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.PlantsListActivity">
+        android:orientation="vertical"
+        tools:context=".view.PlantDetailsActivity">
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -27,7 +28,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:theme="@style/AppTheme.ToolbarTheme"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:subtitle="Plant details information"
+                app:subtitle="@string/add_new_plant"
                 app:subtitleTextAppearance="@style/AppTheme.ToolbarStyle.SubtitleTextAppearance"
                 app:title="@string/app_name"
                 app:titleTextAppearance="@style/AppTheme.ToolbarStyle.TitleTextAppearance" />
@@ -37,17 +38,370 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:fillViewport="true"
             android:orientation="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <android.support.constraint.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:elevation="3dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/backgroundImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_plant_no_photo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:elevation="6dp"
+                        android:src="@drawable/ic_plant_1_big"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/backgroundImageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="4dp">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/nameLabelTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:labelFor="@+id/nameEditText"/>
+
+                        <TextView
+                            android:id="@+id/nameTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="Plant name"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="24sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/nameLabelTextView" />
+
+                        <TextView
+                            android:id="@+id/locationLabelTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/location"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+                            android:labelFor="@+id/locationEditText"/>
+
+                        <TextView
+                            android:id="@+id/locationTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="Plant location"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/locationLabelTextView" />
+
+                        <TextView
+                            android:id="@+id/notesLabelTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Notes"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/locationTextView" />
+
+                        <TextView
+                            android:id="@+id/notesTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="Some longer notes about the plant possibly containing some useful care information."
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/notesLabelTextView" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="4dp">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/calendarIconImageView3"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:contentDescription="@string/calendar_icon"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintEnd_toStartOf="@+id/periodTextView"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/wateringSeparatorView" />
+
+                        <ImageView
+                            android:id="@+id/waterDropletIconImageView3"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="16dp"
+                            android:contentDescription="@string/water_icon"
+                            android:src="@{context.getDrawable(ViewModel.waterDropletIconId)}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/deadlineTextView"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/calendarIconImageView3"
+                            tools:src="@drawable/ic_water_droplet" />
+
+                        <TextView
+                            android:id="@+id/periodTextView3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/open_sans_light"
+                            android:text="@{ViewModel.period}"
+                            android:textColor="?android:textColorSecondary"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/calendarIconImageView3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/calendarIconImageView3"
+                            app:layout_constraintTop_toTopOf="@+id/calendarIconImageView3"
+                            tools:text="Every 2 days" />
+
+                        <TextView
+                            android:id="@+id/deadlineTextView3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/open_sans_light"
+                            android:text="@{ViewModel.deadline}"
+                            android:textColor="@{context.getColor(safeUnbox(ViewModel.getDeadlineTextColorId(context)))}"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/waterDropletIconImageView3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/waterDropletIconImageView3"
+                            app:layout_constraintTop_toTopOf="@+id/waterDropletIconImageView3"
+                            tools:text="Watter tomorrow" />
+
+                        <TextView
+                            android:id="@+id/wateringLabelTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Watering"
+                            android:textSize="18sp"
+                            android:gravity="top"
+                            android:textAlignment="gravity"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/wateringSeparatorView"
+                            style="@style/Divider"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/wateringLabelTextView" />
+
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="4dp">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/deadlineTextView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/open_sans_light"
+                            android:text="@{ViewModel.deadline}"
+                            android:textColor="@{context.getColor(safeUnbox(ViewModel.getDeadlineTextColorId(context)))}"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/waterDropletIconImageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/waterDropletIconImageView4"
+                            app:layout_constraintTop_toTopOf="@+id/waterDropletIconImageView4"
+                            tools:text="Watter tomorrow" />
+
+                        <ImageView
+                            android:id="@+id/waterDropletIconImageView4"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="16dp"
+                            android:contentDescription="@string/water_icon"
+                            android:src="@{context.getDrawable(ViewModel.waterDropletIconId)}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/deadlineTextView"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/calendarIconImageView4"
+                            tools:src="@drawable/ic_water_droplet" />
+
+                        <ImageView
+                            android:id="@+id/calendarIconImageView4"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/calendar_icon"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/fertilizationSeparatorView" />
+
+                        <TextView
+                            android:id="@+id/periodTextView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/open_sans_light"
+                            android:text="@{ViewModel.period}"
+                            android:textColor="?android:textColorSecondary"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/calendarIconImageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/calendarIconImageView4"
+                            app:layout_constraintTop_toTopOf="@+id/calendarIconImageView4"
+                            tools:text="Every 2 days" />
+
+                        <TextView
+                            android:id="@+id/fertilizationLabelTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Fertilization"
+                            android:textSize="18sp"
+                            android:gravity="top"
+                            android:textAlignment="gravity"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/fertilizationSeparatorView"
+                            style="@style/Divider"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/fertilizationLabelTextView" />
+
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
 
         </ScrollView>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </layout>

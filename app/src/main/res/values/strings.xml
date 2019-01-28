@@ -6,4 +6,9 @@
     <string name="add_new_plant">Add new plant</string>
     <string name="name">Name</string>
     <string name="location">Location</string>
+    <string-array name="watering_period_choices">
+        <item>Every day</item>
+        <item>Every few days</item>
+        <item>Selected days</item>
+    </string-array>
 </resources>

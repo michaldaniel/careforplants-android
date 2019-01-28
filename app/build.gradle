@@ -59,13 +59,16 @@ dependencies {
     /* Circle image view*/
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
-    /* Number picker */
-    implementation 'com.shawnlin:number-picker:2.4.6'
+    /* Indicator seek bar */
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
 
     /* Easy settings */
     implementation 'com.github.or-dvir.EasySettings:easysettings-basic:1.1.3'
 
     /* Easy about page */
     implementation 'com.github.medyo:android-about-page:1.2.5'
+
+    /* Weekday selector */
+    implementation 'com.github.DavidProdinger:weekdays-selector:1.1.0'
 
 }
