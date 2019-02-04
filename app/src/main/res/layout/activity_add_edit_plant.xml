@@ -10,37 +10,42 @@
             type="eu.morningbird.careforplants.viewmodel.AddEditPlantActivityVM" />
     </data>
 
-    <LinearLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:animateLayoutChanges="true"
         tools:context=".view.AddEditPlantActivity">
 
-        <android.support.design.widget.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/addEditActivityToolbar"
-                style="@style/AppTheme.ToolbarStyle"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:theme="@style/AppTheme.ToolbarTheme"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:subtitle="@string/add_new_plant"
-                app:subtitleTextAppearance="@style/AppTheme.ToolbarStyle.SubtitleTextAppearance"
-                app:title="@string/app_name"
-                app:titleTextAppearance="@style/AppTheme.ToolbarStyle.TitleTextAppearance" />
-
-        </android.support.design.widget.AppBarLayout>
-
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true"
-            android:orientation="vertical"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/addEditActivityToolbar"
+                    style="@style/AppTheme.ToolbarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/AppTheme.ToolbarTheme"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:subtitle="@string/add_new_plant"
+                    app:subtitleTextAppearance="@style/AppTheme.ToolbarStyle.SubtitleTextAppearance"
+                    app:title="@string/app_name"
+                    app:titleTextAppearance="@style/AppTheme.ToolbarStyle.TitleTextAppearance" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -51,6 +56,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="220dp"
+                        android:animateLayoutChanges="true"
                         android:elevation="3dp"
                         android:gravity="center">
 
@@ -88,6 +94,8 @@
                             android:layout_marginEnd="16dp"
                             android:elevation="6dp"
                             android:src="@drawable/ic_change_plant_icon"
+                            android:visibility="@{ViewModel.addPhotoVisibility}"
+                            android:onClick="@{ViewModel::onChangeIconFabClicked}"
                             app:fabSize="mini"
                             app:layout_constraintBottom_toBottomOf="@+id/addPhotoFab"
                             app:layout_constraintEnd_toStartOf="@+id/addPhotoFab"
@@ -104,6 +112,8 @@
                             android:elevation="6dp"
                             android:src="@drawable/ic_add_a_photo"
                             app:fabSize="mini"
+                            android:visibility="@{ViewModel.addPhotoVisibility}"
+                            android:onClick="@{ViewModel::onAddPhotoFabClicked}"
                             app:layout_constraintBottom_toBottomOf="@+id/removePhotoFab"
                             app:layout_constraintEnd_toStartOf="@+id/removePhotoFab"
                             app:layout_constraintHorizontal_bias="0.5"
@@ -114,13 +124,15 @@
                             android:id="@+id/removePhotoFab"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
                             android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
                             android:backgroundTint="@color/colorDanger"
                             android:elevation="6dp"
                             android:src="@drawable/ic_delete"
                             app:borderWidth="0dp"
                             app:fabSize="mini"
+                            android:visibility="@{ViewModel.removePhotoVisibility}"
+                            android:onClick="@{ViewModel::onRemovePhotoFabClicked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
@@ -132,273 +144,9 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginBottom="8dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="4dp"
-                        app:cardElevation="4dp">
-
-
-                    <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/nameLabelTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/name"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:labelFor="@+id/nameEditText"/>
-
-                        <EditText
-                            android:id="@+id/nameEditText"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="8dp"
-                            android:inputType="text"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/nameLabelTextView" />
-
-                    <TextView
-                        android:id="@+id/locationLabelTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/location"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/nameEditText"
-                        android:labelFor="@+id/locationEditText"/>
-
-                    <EditText
-                        android:id="@+id/locationEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/locationLabelTextView"
-                        android:inputType="text" />
-
-                    <TextView
-                        android:id="@+id/notesLabelTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
-                        android:text="Notes"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/locationEditText" />
-
-                        <EditText
-                            android:id="@+id/notesEditText"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="16dp"
-                            android:gravity="top"
-                            android:lines="3"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/notesLabelTextView" />
-
-                    </android.support.constraint.ConstraintLayout>
-
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="4dp"
-                        app:cardElevation="4dp">
-
-
-                    <android.support.constraint.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <TextView
-                            android:id="@+id/wateringLabelTextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="16dp"
-                            android:text="Watering"
-                            android:textSize="18sp"
-                            android:gravity="top"
-                            android:textAlignment="gravity"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <android.support.v7.widget.AppCompatSpinner
-                            android:id="@+id/wateringPeriodSpinner"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:entries="@array/watering_period_choices"
-                            app:layout_constraintBottom_toBottomOf="@+id/wateringLabelTextView"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/wateringLabelTextView">
-
-                        </android.support.v7.widget.AppCompatSpinner>
-
-                        <View
-                            android:id="@+id/wateringSeparatorView"
-                            style="@style/Divider"
-                            android:layout_marginTop="16dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/wateringPeriodSpinner" />
-
-                        <TextView
-                            android:id="@+id/lastWateringLabelTextView"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginEnd="8dp"
-                            android:text="Days since last watering"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/wateringSeparatorView" />
-
-                        <com.warkiz.widget.IndicatorSeekBar
-                            android:id="@+id/lastWateringIndicatorSeekBar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            app:isb_indicator_color="@color/colorAccent"
-                            app:isb_indicator_text_color="@android:color/white"
-                            app:isb_indicator_text_size="18sp"
-                            app:isb_max="21"
-                            app:isb_min="1"
-                            app:isb_only_thumb_draggable="false"
-                            app:isb_progress="0"
-                            app:isb_seek_smoothly="true"
-                            app:isb_show_indicator="rounded_rectangle"
-                            app:isb_show_tick_marks_type="none"
-                            app:isb_show_tick_texts="false"
-                            app:isb_thumb_color="@color/colorAccent"
-                            app:isb_thumb_size="18dp"
-                            app:isb_track_background_color="@color/colorAccentLight"
-                            app:isb_track_background_size="2dp"
-                            app:isb_track_progress_color="@color/colorAccent"
-                            app:isb_track_progress_size="2dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/lastWateringLabelTextView" />
-
-                        <TextView
-                            android:id="@+id/wateringPeriodLabelTextView"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginEnd="8dp"
-                            android:text="Watering reminder period in days"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/lastWateringIndicatorSeekBar" />
-
-                        <com.warkiz.widget.IndicatorSeekBar
-                            android:id="@+id/wateringPeriodIndicatorSeekBar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            app:isb_indicator_color="@color/colorAccent"
-                            app:isb_indicator_text_color="@android:color/white"
-                            app:isb_indicator_text_size="18sp"
-                            app:isb_max="21"
-                            app:isb_min="1"
-                            app:isb_only_thumb_draggable="false"
-                            app:isb_progress="0"
-                            app:isb_seek_smoothly="true"
-                            app:isb_show_indicator="rounded_rectangle"
-                            app:isb_show_tick_marks_type="none"
-                            app:isb_show_tick_texts="false"
-                            app:isb_thumb_color="@color/colorAccent"
-                            app:isb_thumb_size="18dp"
-                            app:isb_track_background_color="@color/colorAccentLight"
-                            app:isb_track_background_size="2dp"
-                            app:isb_track_progress_color="@color/colorAccent"
-                            app:isb_track_progress_size="2dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/wateringPeriodLabelTextView" />
-
-                        <TextView
-                            android:id="@+id/wateringDaysLabelTextView"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginEnd="8dp"
-                            android:text="Select watering days"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/wateringPeriodIndicatorSeekBar" />
-
-                        <com.dpro.widgets.WeekdaysPicker
-                            android:id="@+id/wateringWeekdaysPicker"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp"
-                            app:background_color="@android:color/white"
-                            app:border_color="@color/colorAccent"
-                            app:border_highlight_color="@color/colorAccent"
-                            app:border_highlight_thickness="2"
-                            app:border_thickness="2"
-                            app:highlight_color="@color/colorAccent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/wateringDaysLabelTextView"
-                            app:sunday_first_day="false"
-                            app:text_color="@android:color/white"
-                            app:weekend_color="@android:color/white"
-                            app:weekend_text_color="@android:color/white" />
-
-
-
-
-
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
                         app:cardBackgroundColor="@android:color/white"
                         app:cardCornerRadius="4dp"
@@ -408,6 +156,282 @@
                         <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/nameLabelTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                android:labelFor="@+id/nameEditText"
+                                android:text="@string/name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <EditText
+                                android:id="@+id/nameEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:inputType="text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/nameLabelTextView" />
+
+                            <TextView
+                                android:id="@+id/locationLabelTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                android:labelFor="@+id/locationEditText"
+                                android:text="@string/location"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+                            <EditText
+                                android:id="@+id/locationEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:inputType="text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/locationLabelTextView" />
+
+                            <TextView
+                                android:id="@+id/notesLabelTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                android:text="Notes"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/locationEditText" />
+
+                            <EditText
+                                android:id="@+id/notesEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:gravity="top"
+                                android:lines="3"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/notesLabelTextView" />
+
+                        </android.support.constraint.ConstraintLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp">
+
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/wateringLabelTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:gravity="top"
+                                android:text="Watering"
+                                android:textAlignment="gravity"
+                                android:textSize="18sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/wateringPeriodSpinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:entries="@array/watering_period_choices"
+                                android:onItemSelected="@{ViewModel::onWateringPeriodSpinnerItemSelected}"
+                                app:layout_constraintBottom_toBottomOf="@+id/wateringLabelTextView"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/wateringLabelTextView">
+
+                            </android.support.v7.widget.AppCompatSpinner>
+
+                            <View
+                                android:id="@+id/wateringSeparatorView"
+                                style="@style/Divider"
+                                android:layout_marginTop="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/wateringPeriodSpinner" />
+
+                            <TextView
+                                android:id="@+id/lastWateringLabelTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                android:text="Days since last watering"
+                                android:visibility="@{ViewModel.wateringPeriodVisibility}"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/wateringSeparatorView" />
+
+                            <com.warkiz.widget.IndicatorSeekBar
+                                android:id="@+id/lastWateringIndicatorSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:visibility="@{ViewModel.wateringPeriodVisibility}"
+                                app:isb_indicator_color="@color/colorAccent"
+                                app:isb_indicator_text_color="@android:color/white"
+                                app:isb_indicator_text_size="18sp"
+                                app:isb_max="21"
+                                app:isb_min="1"
+                                app:isb_only_thumb_draggable="false"
+                                app:isb_progress="0"
+                                app:isb_seek_smoothly="true"
+                                app:isb_show_indicator="rounded_rectangle"
+                                app:isb_show_tick_marks_type="none"
+                                app:isb_show_tick_texts="false"
+                                app:isb_thumb_color="@color/colorAccent"
+                                app:isb_thumb_size="18dp"
+                                app:isb_track_background_color="@color/colorAccentLight"
+                                app:isb_track_background_size="2dp"
+                                app:isb_track_progress_color="@color/colorAccent"
+                                app:isb_track_progress_size="2dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/lastWateringLabelTextView" />
+
+                            <TextView
+                                android:id="@+id/wateringPeriodLabelTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                android:text="Watering reminder period in days"
+                                android:visibility="@{ViewModel.wateringPeriodVisibility}"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/lastWateringIndicatorSeekBar" />
+
+                            <com.warkiz.widget.IndicatorSeekBar
+                                android:id="@+id/wateringPeriodIndicatorSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:visibility="@{ViewModel.wateringPeriodVisibility}"
+                                app:isb_indicator_color="@color/colorAccent"
+                                app:isb_indicator_text_color="@android:color/white"
+                                app:isb_indicator_text_size="18sp"
+                                app:isb_max="21"
+                                app:isb_min="1"
+                                app:isb_only_thumb_draggable="false"
+                                app:isb_progress="0"
+                                app:isb_seek_smoothly="true"
+                                app:isb_show_indicator="rounded_rectangle"
+                                app:isb_show_tick_marks_type="none"
+                                app:isb_show_tick_texts="false"
+                                app:isb_thumb_color="@color/colorAccent"
+                                app:isb_thumb_size="18dp"
+                                app:isb_track_background_color="@color/colorAccentLight"
+                                app:isb_track_background_size="2dp"
+                                app:isb_track_progress_color="@color/colorAccent"
+                                app:isb_track_progress_size="2dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/wateringPeriodLabelTextView" />
+
+                            <TextView
+                                android:id="@+id/wateringDaysLabelTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                android:text="Select watering days"
+                                android:visibility="@{ViewModel.wateringDaysVisibility}"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/wateringSeparatorView"
+                                tools:visibility="gone"/>
+
+                            <com.dpro.widgets.WeekdaysPicker
+                                android:id="@+id/wateringWeekdaysPicker"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:visibility="@{ViewModel.wateringDaysVisibility}"
+                                app:background_color="@android:color/white"
+                                app:border_color="@color/colorAccent"
+                                app:border_highlight_color="@color/colorAccent"
+                                app:border_highlight_thickness="2"
+                                app:border_thickness="2"
+                                app:highlight_color="@color/colorAccent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/wateringDaysLabelTextView"
+                                app:sunday_first_day="false"
+                                app:text_color="@android:color/white"
+                                app:weekend_color="@android:color/white"
+                                app:weekend_text_color="@android:color/white"
+                                tools:visibility="gone"/>
+
+
+                        </android.support.constraint.ConstraintLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="128dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp">
+
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
                             android:gravity="center">
 
                             <TextView
@@ -416,10 +440,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
                                 android:layout_marginTop="16dp"
-                                android:text="Fertilization"
-                                android:textSize="18sp"
                                 android:gravity="top"
+                                android:text="Fertilization"
                                 android:textAlignment="gravity"
+                                android:textSize="18sp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -428,6 +452,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="8dp"
+                                android:onCheckedChanged="@{ViewModel::onFertilizationSwitchCheckedChanged}"
                                 app:layout_constraintBottom_toBottomOf="@+id/fertilizationLabelTextView"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="@+id/fertilizationLabelTextView">
@@ -449,6 +474,7 @@
                                 android:layout_marginStart="8dp"
                                 android:layout_marginTop="16dp"
                                 android:layout_marginEnd="8dp"
+                                android:visibility="@{ViewModel.fertilizationVisibility}"
                                 android:text="Fertilization reminder period in days"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -460,6 +486,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="16dp"
                                 android:layout_marginBottom="16dp"
+                                android:visibility="@{ViewModel.fertilizationVisibility}"
                                 app:isb_indicator_color="@color/colorAccent"
                                 app:isb_indicator_text_color="@android:color/white"
                                 app:isb_indicator_text_size="18sp"
@@ -483,7 +510,6 @@
                                 app:layout_constraintTop_toBottomOf="@+id/fertilizationPeriodLabelTextView" />
 
 
-
                         </android.support.constraint.ConstraintLayout>
 
                     </android.support.v7.widget.CardView>
@@ -491,9 +517,24 @@
 
                 </LinearLayout>
 
-        </ScrollView>
+            </ScrollView>
+        </LinearLayout>
 
-    </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/savePlantFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="32dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="6dp"
+            android:onClick="@{ViewModel::onSavePlantFabClicked}"
+            android:src="@drawable/ic_save"
+            app:fabSize="normal" />
+
+    </android.support.design.widget.CoordinatorLayout>
 
 
 </layout>

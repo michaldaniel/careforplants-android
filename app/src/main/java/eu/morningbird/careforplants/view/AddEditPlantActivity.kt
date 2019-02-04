@@ -55,6 +55,14 @@ class AddEditPlantActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         modifyLooks()
+        connectSignals()
+    }
+
+    private fun connectSignals() {
+        lastWateringIndicatorSeekBar.onSeekChangeListener = addEditPlantActivityVM.lastWateringIndicatorSeekBarOnSeekChanged
+        wateringPeriodIndicatorSeekBar.onSeekChangeListener = addEditPlantActivityVM.wateringPeriodIndicatorSeekBarOnSeekChanged
+        fertilizationPeriodIndicatorSeekBar.onSeekChangeListener = addEditPlantActivityVM.fertilizationPeriodIndicatorSeekBarOnSeekChanged
+        wateringWeekdaysPicker.setOnWeekdaysChangeListener(addEditPlantActivityVM.wateringDaysPickerOnWeekdaysChangeListener)
     }
 
     private fun modifyLooks() {
